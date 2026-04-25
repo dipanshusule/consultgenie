@@ -1,6 +1,6 @@
 # 🧠 ConsultGenie — Agentic AI Consulting Report Generator
 
-> AI Agent System · Semester IV ECE · B.Tech ECE-A · 2025–26
+> AI Agent System · Semester IV ECE · B.Tech ECE-B · 2025–26
 
 A production-grade agentic AI system that takes a business problem and industry as input, autonomously decides whether to search the web for real-world data, applies consulting frameworks, generates a structured professional report, and evaluates its own output using an LLM-as-Judge — all in one pipeline.
 
@@ -17,7 +17,7 @@ A production-grade agentic AI system that takes a business problem and industry 
 
 **Semester:** IV · B.Tech ECE-A  
 **Department:** Electronics and Communication Engineering  
-**Date:** 22/04/2026
+**Date:** 24/04/2026
 
 ---
 
