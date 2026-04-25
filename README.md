@@ -15,7 +15,7 @@ A production-grade agentic AI system that takes a business problem and industry 
 | Role A — Architect & Integrator | Vivek Samarth | 16 |
 | Role B — Builder & Deployer | Dipanshu Sule | 15 |
 
-**Semester:** IV · B.Tech ECE-A  
+**Semester:** IV · B.Tech ECE-B  
 **Department:** Electronics and Communication Engineering  
 **Date:** 24/04/2026
 
