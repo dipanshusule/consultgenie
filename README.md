@@ -74,7 +74,34 @@ A separate **LLM-as-Judge** then evaluates the report on structure, logical reas
 The key agentic property is the autonomous decision at Step 2: the agent reads the problem, reasons about whether real-world search would improve the output, and decides whether to invoke Tavily or skip it — without being told which to do.
 
 ---
+## 🏗 System Architecture
 
+```mermaid
+flowchart TD
+    A[🖥️ Streamlit UI\nBusiness problem + industry sector] --> B
+
+    B[🤖 Gemini — Problem Decomposition\nUnderstands context · Outputs QUERY lines\nDecides which frameworks to apply] --> C{Search\nNeeded?}
+
+    C -- YES --> D[🔍 Tavily Search API\nBest practices · Expert frameworks\nPrecedent cases]
+    C -- NO --> E
+
+    D --> E[📊 Framework Analysis\nSWOT · Root Cause Analysis · Gap Analysis]
+
+    E --> F[📝 Gemini — Report Generation\nProblem Framing · Root Cause Analysis\nKey Findings · Recommendations]
+
+    F --> G[⚖️ Gemini — LLM-as-Judge\nStructure · Reasoning · Relevance · Action\nOverall Score 0–10 + Feedback]
+
+    G --> H[✅ Final Output — Streamlit UI\nConsulting Report + Score + Judge Feedback]
+
+    style A fill:#0d9488,color:#fff
+    style H fill:#0d9488,color:#fff
+    style B fill:#5046a0,color:#fff
+    style E fill:#5046a0,color:#fff
+    style F fill:#5046a0,color:#fff
+    style D fill:#9a3412,color:#fff
+    style G fill:#b45309,color:#fff
+    style C fill:#1e1e3a,color:#fff
+```
 ## 🔄 Agent Workflow
 
 **Step 1 — User Input**  
